@@ -38,12 +38,17 @@ Partial Class Form1
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.firstbutton = New System.Windows.Forms.Button()
+        Me.prevbutton = New System.Windows.Forms.Button()
+        Me.nextbutton = New System.Windows.Forms.Button()
+        Me.lastbutton = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MenuStrip1
         '
+        Me.MenuStrip1.BackColor = System.Drawing.Color.Gray
         Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
@@ -62,46 +67,46 @@ Partial Class Form1
         'NewToolStripMenuItem
         '
         Me.NewToolStripMenuItem.Name = "NewToolStripMenuItem"
-        Me.NewToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.NewToolStripMenuItem.Size = New System.Drawing.Size(123, 26)
         Me.NewToolStripMenuItem.Text = "New"
         '
         'SaveToolStripMenuItem
         '
         Me.SaveToolStripMenuItem.Name = "SaveToolStripMenuItem"
-        Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(123, 26)
         Me.SaveToolStripMenuItem.Text = "Save"
         '
         'Field1
         '
-        Me.Field1.Location = New System.Drawing.Point(301, 122)
+        Me.Field1.Location = New System.Drawing.Point(176, 109)
         Me.Field1.Name = "Field1"
         Me.Field1.Size = New System.Drawing.Size(211, 27)
         Me.Field1.TabIndex = 1
         '
         'Field2
         '
-        Me.Field2.Location = New System.Drawing.Point(301, 155)
+        Me.Field2.Location = New System.Drawing.Point(176, 142)
         Me.Field2.Name = "Field2"
         Me.Field2.Size = New System.Drawing.Size(211, 27)
         Me.Field2.TabIndex = 2
         '
         'Field3
         '
-        Me.Field3.Location = New System.Drawing.Point(301, 188)
+        Me.Field3.Location = New System.Drawing.Point(176, 175)
         Me.Field3.Name = "Field3"
         Me.Field3.Size = New System.Drawing.Size(211, 27)
         Me.Field3.TabIndex = 3
         '
         'Field4
         '
-        Me.Field4.Location = New System.Drawing.Point(301, 221)
+        Me.Field4.Location = New System.Drawing.Point(176, 208)
         Me.Field4.Name = "Field4"
         Me.Field4.Size = New System.Drawing.Size(211, 27)
         Me.Field4.TabIndex = 4
         '
         'Field5
         '
-        Me.Field5.Location = New System.Drawing.Point(301, 254)
+        Me.Field5.Location = New System.Drawing.Point(176, 241)
         Me.Field5.Name = "Field5"
         Me.Field5.Size = New System.Drawing.Size(211, 27)
         Me.Field5.TabIndex = 5
@@ -109,9 +114,9 @@ Partial Class Form1
         'PictureBox1
         '
         Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PictureBox1.Location = New System.Drawing.Point(568, 116)
+        Me.PictureBox1.Location = New System.Drawing.Point(411, 54)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(193, 165)
+        Me.PictureBox1.Size = New System.Drawing.Size(339, 282)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 6
         Me.PictureBox1.TabStop = False
@@ -119,7 +124,7 @@ Partial Class Form1
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(242, 129)
+        Me.Label1.Location = New System.Drawing.Point(123, 109)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(47, 20)
         Me.Label1.TabIndex = 7
@@ -128,7 +133,7 @@ Partial Class Form1
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(211, 158)
+        Me.Label2.Location = New System.Drawing.Point(92, 145)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(78, 20)
         Me.Label2.TabIndex = 8
@@ -137,7 +142,7 @@ Partial Class Form1
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(224, 188)
+        Me.Label3.Location = New System.Drawing.Point(104, 178)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(66, 20)
         Me.Label3.TabIndex = 9
@@ -146,7 +151,7 @@ Partial Class Form1
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(242, 221)
+        Me.Label4.Location = New System.Drawing.Point(130, 211)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(40, 20)
         Me.Label4.TabIndex = 10
@@ -155,7 +160,7 @@ Partial Class Form1
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(242, 254)
+        Me.Label5.Location = New System.Drawing.Point(122, 241)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(48, 20)
         Me.Label5.TabIndex = 11
@@ -165,11 +170,56 @@ Partial Class Form1
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
         '
+        'firstbutton
+        '
+        Me.firstbutton.BackColor = System.Drawing.Color.Tan
+        Me.firstbutton.Location = New System.Drawing.Point(34, 351)
+        Me.firstbutton.Name = "firstbutton"
+        Me.firstbutton.Size = New System.Drawing.Size(94, 69)
+        Me.firstbutton.TabIndex = 12
+        Me.firstbutton.Text = "first"
+        Me.firstbutton.UseVisualStyleBackColor = False
+        '
+        'prevbutton
+        '
+        Me.prevbutton.BackColor = System.Drawing.Color.Tan
+        Me.prevbutton.Location = New System.Drawing.Point(146, 351)
+        Me.prevbutton.Name = "prevbutton"
+        Me.prevbutton.Size = New System.Drawing.Size(94, 69)
+        Me.prevbutton.TabIndex = 13
+        Me.prevbutton.Text = "previous"
+        Me.prevbutton.UseVisualStyleBackColor = False
+        '
+        'nextbutton
+        '
+        Me.nextbutton.BackColor = System.Drawing.Color.Tan
+        Me.nextbutton.Location = New System.Drawing.Point(260, 351)
+        Me.nextbutton.Name = "nextbutton"
+        Me.nextbutton.Size = New System.Drawing.Size(94, 69)
+        Me.nextbutton.TabIndex = 14
+        Me.nextbutton.Text = "next"
+        Me.nextbutton.UseVisualStyleBackColor = False
+        '
+        'lastbutton
+        '
+        Me.lastbutton.BackColor = System.Drawing.Color.Tan
+        Me.lastbutton.Location = New System.Drawing.Point(372, 351)
+        Me.lastbutton.Name = "lastbutton"
+        Me.lastbutton.Size = New System.Drawing.Size(94, 69)
+        Me.lastbutton.TabIndex = 15
+        Me.lastbutton.Text = "last"
+        Me.lastbutton.UseVisualStyleBackColor = False
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.SystemColors.ControlLight
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.lastbutton)
+        Me.Controls.Add(Me.nextbutton)
+        Me.Controls.Add(Me.prevbutton)
+        Me.Controls.Add(Me.firstbutton)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
@@ -209,4 +259,8 @@ Partial Class Form1
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
+    Friend WithEvents firstbutton As Button
+    Friend WithEvents prevbutton As Button
+    Friend WithEvents nextbutton As Button
+    Friend WithEvents lastbutton As Button
 End Class
